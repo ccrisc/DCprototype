@@ -1,0 +1,1 @@
+ex() %>% check_code("installed.packages()")
