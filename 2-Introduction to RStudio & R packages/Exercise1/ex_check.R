@@ -1,3 +1,3 @@
 ex() %>% check_function("library") %>% {
-  check_arg(., "data.table") %>% check_equal()
+  check_arg(., 1) %>% check_equal("data.table")
 }
