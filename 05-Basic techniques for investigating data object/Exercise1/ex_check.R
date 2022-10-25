@@ -5,4 +5,3 @@ ex() %>% check_or(
   check_function(.,"summary") %>% check_arg("object"),
   check_function(.,"str") %>% check_arg("object")
 )
-success_msg(&quot;Awesome! Great job!&quot;)
