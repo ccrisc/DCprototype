@@ -1,1 +1,1 @@
-ex() %>% check_code("installed.packages()")
+ex() %>% check_output_expr("installed.packages()")
