@@ -1,0 +1,48 @@
+---
+title: "DataCamp Light Demo"
+output:
+  html_document:
+    self_contained: false
+---
+
+
+# Interactive Tutorials
+
+
+```{r, include=FALSE}
+#do not change
+tutorial::go_interactive()
+```
+
+
+
+```{r ex="create_a", type="pre-exercise-code"}
+library(data.table)
+library(lubridate)
+library(stringr)
+library(randomNames)
+```
+
+```{r ex="create_a", type="sample-code"}
+#read demographics from: https://raw.githubusercontent.com/ccrisc/DCprototype/main/demographics.csv
+demo
+```
+
+```{r ex="create_a", type="solution"}
+demo <- read.csv("https://raw.githubusercontent.com/ccrisc/DCprototype/main/demographics.csv", sep = ',')
+demo
+demo[, Names := seq(demo[,.N])]
+demo
+```
+
+
+```{r ex="create_a", type="sct"}
+ex() %>% 
+  check_correct(
+    check_object(., "demo") %>% check_equal(),
+    check_function(., "read.csv") %>% {
+      check_arg(., 1) %>% check_equal()
+    })
+
+```
+
