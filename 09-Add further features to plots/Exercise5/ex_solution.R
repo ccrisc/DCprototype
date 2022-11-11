@@ -1,3 +1,6 @@
+# Read in data ####
+myData <- fread("https://raw.githubusercontent.com/ccrisc/DCprototype/main/transactions.csv")
+
 # 5
 par(mfrow = c(1, 2))
 hist(myData[, PurchAmount],xlab="Purchase Amount",main="Histogram Purchase Amount",
