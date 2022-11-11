@@ -1,3 +1,2 @@
-myData <- fread("https://raw.githubusercontent.com/ccrisc/DCprototype/main/transactions.csv")
-CustData <- fread("https://raw.githubusercontent.com/ccrisc/DCprototype/main/demographics.csv")
-
+library(data.table)
+library(lubridate)
