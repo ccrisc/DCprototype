@@ -1,2 +1,2 @@
-ex %>% check_function("getwd")
+ex() %>% check_function("getwd") 
 
